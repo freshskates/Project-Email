@@ -1,0 +1,13 @@
+//string temp = line.substr(line.length() - 4, line.length());
+		//if (temp == ".com" || temp == ".net" || temp == ".org");
+		
+		//if (ValidateEmail(line)) cout << "Valid: " << line << endl;
+		//else cout << "Invalid: " << line << endl;
+
+bool ValidateEmail(string email)
+{
+	if (regex_match(email, regex("(\\w+)(\\.|_)?(\\w*)@(\\w+)(\\.(\\w+))+")))
+		return true;
+
+	return false;
+}
